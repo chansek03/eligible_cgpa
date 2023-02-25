@@ -1,0 +1,113 @@
+<html>
+<body>
+  <head>
+    <script type="text/javascript">
+      noofrows=0;
+      noofrows1=0;
+      noofrows2=0;
+      cgpa=0;
+
+
+
+
+
+
+
+      function addrecord(){
+
+
+        // id=document.getElementById("Id").value;
+        // cgpa=document.getElementById("cgpa").value;
+        // noofrows+=1
+        // table=document.getElementById("mytable1");
+        // row=table.insertRow(noofrows);
+        // id=row.insertCell(0)
+        // cgpa=row.insertCell(1)
+        let Id=document.getElementById("id").value
+        let Cgpa=document.getElementById("cgpa").value
+
+        if(Cgpa>=7.5){
+          noofrows1+=1
+          table=document.getElementById("mytable2");
+          row=table.insertRow(noofrows1);
+          id=row.insertCell(0)
+          cgpa=row.insertCell(1)
+          id.innerHTML=Id
+          cgpa.innerHTML=Cgpa
+        }
+        else{
+          noofrows2+=1
+          table=document.getElementById("mytable3");
+          row=table.insertRow(noofrows2);
+          id=row.insertCell(0)
+          cgpa=row.insertCell(1)
+          id.innerHTML=Id
+          cgpa.innerHTML=Cgpa
+
+        }
+
+      }
+
+
+    </script>
+    <style media="screen">
+      #mytable1,#mytable2,#mytable3{
+        height:33px;
+        width:21%;
+      }
+      #mytable,#mytable1,#mytable2,#mytable3{
+        margin:2% 38%;
+      }
+      #button{
+        margin:0% 47%;
+      }
+      h1{
+        margin:2% 44%;
+      }
+    </style>
+  </head>
+  <body>
+
+    <table id="mytable" border="1px">
+      <tr>
+        <td>Id</td>
+        <td>cgpa</td>
+
+
+      </tr>
+      <tr>
+        <td><input type="text" name="Id" id="id"></td>
+        <td><input type="text" name="cgpa" id="cgpa"></td>
+
+        </tr>
+    </table>
+    <h1 id="error"></h1>
+    <input type="button" name="" value="insert" onclick="addrecord()" id="button">
+    <h1>eligible list</h1>
+    <table id="mytable2" border="1px">
+      <tr>
+        <td>Id</td>
+        <td>cgpa</td>
+        </tr>
+        </table>
+        <h1>not eligible</h1>
+        <table id="mytable3" border="1px">
+          <tr>
+            <td>Id</td>
+            <td>cgpa</td>
+            </tr>
+            </table>
+    <!-- <h1>Students list</h1> -->
+    <!-- <table id="mytable1" border="1px">
+      <tr>
+        <td>Id</td>
+        <td>cgpa</td>
+
+
+      </tr>
+    </table> -->
+
+  </body>
+
+</body>
+</html>
